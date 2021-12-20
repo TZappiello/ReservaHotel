@@ -16,11 +16,11 @@ public class Program {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 		try {
-			System.out.println("Room number: ");
+			System.out.print("Room number: ");
 			int number = sc.nextInt();
-			System.out.println("Check-in (dd/MM/yyyy): ");
+			System.out.print("Check-in (dd/MM/yyyy): ");
 			Date checkIn = sdf.parse(sc.next());
-			System.out.println("Check-out (dd/MM/yyyy): ");
+			System.out.print("Check-out (dd/MM/yyyy): ");
 			Date checkOut = sdf.parse(sc.next());
 
 			Reservation reservation = new Reservation(number, checkIn, checkOut);
@@ -28,9 +28,9 @@ public class Program {
 
 			System.out.println();
 			System.out.println("Enter data to update the reservation: ");
-			System.out.println("Check-in (dd/MM/yyyy): ");
+			System.out.print("Check-in (dd/MM/yyyy): ");
 			checkIn = sdf.parse(sc.next());
-			System.out.println("Check-out (dd/MM/yyyy): ");
+			System.out.print("Check-out (dd/MM/yyyy): ");
 			checkOut = sdf.parse(sc.next());
 
 			reservation.updateDates(checkIn, checkOut);
